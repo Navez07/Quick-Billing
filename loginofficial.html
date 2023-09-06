@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="loginofficial.css">
+    <link rel="icon" type="image/x-icon" href="photos/favicon.png">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="backbtn">
+            <a href="Official_Website.html" class = "back-icon"><i class='far fa-arrow-alt-circle-left'></i></a>
+        </div>
+        <div class="login-signup-form">
+            <div class="login-form">
+
+                <img src="photos/Logo1.png" alt="Logo" class="logo">
+
+                <h1>Login</h1>
+                <form action="#">
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="submit" value="Login">
+                </form>
+                <p>Don't have an account? <a href="#" id="tooglesign">Sign Up</a></p>
+            </div>
+            <div class="signup-form">
+                <img src="photos/Logo1.png" alt="Logo" class="logo">
+                <h1>Sign Up</h1>
+
+                <form action="#">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="submit" value="Sign Up">
+                </form>
+                <p>Already have an account? <a href="#" id="logintoggle">Login</a></p>
+            </div>
+        </div>
+        <!-- <div class="background-image">
+      <img src="background.jpg" alt="Background Image">
+    </div> -->
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".signup-form").hide();
+            $("#tooglesign").click(function () {
+                $(".login-form").hide();
+                $(".signup-form").show();
+            });
+            $("#logintoggle").click(function () {
+                $(".login-form").show();
+                $(".signup-form").hide();
+            });
+        });
+
+    </script>
+</body>
+
+</html>
